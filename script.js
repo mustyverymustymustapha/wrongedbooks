@@ -1,6 +1,8 @@
 const textElement = document.getElementById('text');
 const speedSlider = document.getElementById('speed');
 const speedValue = document.getElementById('speed-value');
+const textColorPicker = document.getElementById('text-color');
+const bgColorPicker = document.getElementById('bg-color');
 let flipInterval;
 
 function getRandomBookText() {
@@ -35,6 +37,14 @@ function startFlipping() {
 speedSlider.addEventListener('input', function() {
     speedValue.textContent = this.value;
     startFlipping();
+});
+
+textColorPicker.addEventListener('input', function() {
+    textElement.style.color = this.value;
+});
+
+bgColorPicker.addEventListener('input', function() {
+    textElement.style.backgroundColor = this.value;
 });
 
 getRandomBookText();
