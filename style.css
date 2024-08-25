@@ -40,15 +40,19 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-#speed-control, #color-controls > div {
+#speed-control, #color-controls > div, #font-controls > div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-#speed {
+#speed, #font-size {
   flex-grow: 1;
 }
-#color-controls {
+#color-controls, #font-controls {
   display: flex;
   justify-content: space-between;
+}
+#font-family {
+  padding: 5px;
+  border-radius: 3px;
 }

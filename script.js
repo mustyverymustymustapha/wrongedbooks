@@ -3,6 +3,9 @@ const speedSlider = document.getElementById('speed');
 const speedValue = document.getElementById('speed-value');
 const textColorPicker = document.getElementById('text-color');
 const bgColorPicker = document.getElementById('bg-color');
+const fontFamilySelect = document.getElementById('font-family');
+const fontSizeSlider = document.getElementById('font-size');
+const fontSizeValue = document.getElementById('font-size-value');
 let flipInterval;
 
 function getRandomBookText() {
@@ -45,6 +48,15 @@ textColorPicker.addEventListener('input', function() {
 
 bgColorPicker.addEventListener('input', function() {
     textElement.style.backgroundColor = this.value;
+});
+
+fontFamilySelect.addEventListener('change', function() {
+    textElement.style.fontFamily = this.value;
+});
+
+fontSizeSlider.addEventListener('input', function() {
+    textElement.style.fontSize = this.value + 'px';
+    fontSizeValue.textContent = this.value + 'px';
 });
 
 getRandomBookText();

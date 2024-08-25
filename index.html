@@ -26,6 +26,23 @@
                     <input type="color" id="bg-color" value="#ffffff">
                 </div>
             </div>
+            <div id="font-controls">
+                <div>
+                    <label for="font-family">Font Family:</label>
+                    <select id="font-family">
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="Verdana, sans-serif">Verdana</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="font-size">Font Size:</label>
+                    <input type="range" id="font-size" min="12" max="36" value="18" step="1">
+                    <span id="font-size-value">18px</span>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
