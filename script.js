@@ -1,4 +1,7 @@
 const textElement = document.getElementById('text');
+const speedSlider = document.getElementById('speed');
+const speedValue = document.getElementById('speed-value');
+let flipInterval;
 
 function getRandomBookText() {
     const randomWorkId = Math.floor(Math.random() * 10000000);
@@ -21,9 +24,17 @@ function getRandomBookText() {
 }
 
 function startFlipping() {
-    setInterval(() => {
+    if (flipInterval) {
+        clearInterval(flipInterval);
+    }
+    flipInterval = setInterval(() => {
         textElement.classList.toggle('upside-down');
-    }, 3000);
+    }, speedSlider.value * 1000);
 }
+
+speedSlider.addEventListener('input', function() {
+    speedValue.textContent = this.value;
+    startFlipping();
+});
 
 getRandomBookText();
